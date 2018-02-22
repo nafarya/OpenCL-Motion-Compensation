@@ -208,7 +208,7 @@ void parallelMotionComp(float* a, float* b) {
 	cl_device_id devices[10];
 	cl_uint num_devices = 0;
 
-	cl_int n1 = clGetDeviceIDs(platforms[0], device_type, num_entries, devices, &num_devices);
+	cl_int n1 = clGetDeviceIDs(platforms[1], device_type, num_entries, devices, &num_devices);
 	printf("Number of devices = %d\n", num_devices);
 
 	char deviceNames[10240];
@@ -280,7 +280,7 @@ void parallelMotionComp(float* a, float* b) {
 	err_check(err, "image3: clCreateImage2D");
 
 
-	const char *kernel_name = "motion_comp_global";
+	const char *kernel_name = "motion_comp_local";
 	cl_kernel ker = clCreateKernel(prog, kernel_name, &error);
 
 	cl_mem buff_motionVec = clCreateBuffer(context, CL_MEM_READ_WRITE, sizeof(cl_int2)*(rows / WS) * (cols / WS), NULL, &error);
@@ -300,12 +300,12 @@ void parallelMotionComp(float* a, float* b) {
 	err = clEnqueueWriteImage(com_queue, image2, CL_TRUE, origin, region, 0, 0, b, 0, NULL, NULL);
 
 
-	const size_t global_work_size[] = { cols / WS , rows / WS, 1};
+	const size_t global_work_size[] = { cols, rows, 1};
 	const size_t local_work_size[] = { WS, WS };
 
 
 	cl_event timer;
-	cl_int err_code = clEnqueueNDRangeKernel(com_queue, ker, 2, 0, global_work_size, NULL, NULL, NULL, &timer);
+	cl_int err_code = clEnqueueNDRangeKernel(com_queue, ker, 2, 0, global_work_size, local_work_size, NULL, NULL, &timer);
 
 	
 
