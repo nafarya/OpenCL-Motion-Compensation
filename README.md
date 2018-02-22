@@ -24,3 +24,16 @@ LDSBankConflict: 0,22%
 
 for more details check [profiler info file](CodeXL_Profiler_Feb-22-2018_11-57-37.csv)
 
+# Examples
+
+frame0015
+<img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/frame0015.png">
+
+frame0016
+<img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/frame0016.png">
+
+Compensated frame
+<img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/compensatedFrame.png">
+
+diff frame
+<img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/diff.png">
