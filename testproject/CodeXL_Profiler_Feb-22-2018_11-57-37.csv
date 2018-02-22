@@ -1,0 +1,24 @@
+#ProfileFileVersion=3.1
+#ProfilerVersion=3.1.10103
+#API=OpenCL
+#Application=C:/Users/irinaartemieva/Desktop/OpenCL-Motion-Compensation-master/x64/Release/testproject.exe
+#ApplicationArgs=
+#WorkingDirectory=C:/Users/irinaartemieva/Desktop/OpenCL-Motion-Compensation-master/testproject
+#Device Cayman Platform Vendor=Advanced Micro Devices, Inc.
+#Device Cayman Platform Name=AMD Accelerated Parallel Processing
+#Device Cayman Platform Version=OpenCL 2.0 AMD-APP (1800.11)
+#Device Cayman CLDriver Version=1800.11 (VM)
+#Device Cayman CLRuntime Version=OpenCL 1.2 AMD-APP (1800.11)
+#Device Cayman NumberAppAddressBits=32
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz Platform Vendor=Advanced Micro Devices, Inc.
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz Platform Name=AMD Accelerated Parallel Processing
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz Platform Version=OpenCL 2.0 AMD-APP (1800.11)
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz CLDriver Version=1800.11 (sse2,avx)
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz CLRuntime Version=OpenCL 1.2 AMD-APP (1800.11)
+#Device Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz NumberAppAddressBits=64
+#OS Version=Windows 7 Build 6.1.7601
+#DisplayName=Feb-22-2018_11-57-37
+#ListSeparator=;
+#ForceSinglePass=False
+Method; ExecutionOrder; ThreadID; CallIndex; GlobalWorkSize; WorkGroupSize; Time; LocalMemSize; VGPRs; SGPRs; ScratchRegs; FCStacks; Wavefronts; ALUInsts; FetchInsts; WriteInsts; LDSFetchInsts; LDSWriteInsts; ALUBusy; ALUFetchRatio; ALUPacking; FetchSize; CacheHit; FetchUnitBusy; FetchUnitStalled; WriteUnitStalled; FastPath; CompletePath; PathUtilization; LDSBankConflict
+motion_comp_local__k1_Cayman1; 1; 5036; 20; {   1280     720       1}; {    8     8     1};       214.78022; 10368; 18; NA; 0; 4;     14400.00;     46088.52;        10.00;        17.26;     20231.00;        41.26;        72.97;      4608.85;        73.03;      7352.50;        76.75;         0.06;         0.00;         0.00;      8834.00;         0.00;       100.00;         0.22
