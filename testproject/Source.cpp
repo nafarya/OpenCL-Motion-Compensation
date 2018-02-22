@@ -342,16 +342,16 @@ void parallelMotionComp(float* a, float* b) {
 
 	
 
-	vector<float> output(height * width);
-	clEnqueueReadImage(com_queue, image3, CL_TRUE, origin, region, 0, 0, output.data(), NULL, NULL, NULL);
+	//vector<float> output(height * width);
+	//clEnqueueReadImage(com_queue, image3, CL_TRUE, origin, region, 0, 0, output.data(), NULL, NULL, NULL);
 
 
-	ofstream out("TRY.pgm");
-	out << "P2\n" << width << ' ' << height << "\n255\n";
-	for (int i = 0; i < width*height; i++) {
-		out << output[i] << '\n';
-	}
-	out.close();
+	//ofstream out("outputfromdevice.pgm");
+	//out << "P2\n" << width << ' ' << height << "\n255\n";
+	//for (int i = 0; i < width*height; i++) {
+	//	out << output[i] << '\n';
+	//}
+	//out.close();
 
 	clReleaseMemObject(buff_motionVec);
 	clReleaseProgram(prog);
