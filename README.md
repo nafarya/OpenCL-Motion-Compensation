@@ -27,10 +27,10 @@ For more details check [profiler info file](CodeXL_Profiler_Feb-22-2018_11-57-37
 
 # Examples
 
-**Frame0015**
+**Frame0015**, resolution: 1280x720
 <img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/frame0015.png">
 
-**Frame0016**
+**Frame0016**, resolution: 1280x720
 <img src="https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/examples/frame0016.png">
 
 **Motion compensated frame**
