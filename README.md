@@ -1,6 +1,6 @@
 # OpenCL-based Motion Compensation algorithm
 
-Implemented variable block motion compensation algorithm.
+Implemented [variable block motion compensation](https://en.wikipedia.org/wiki/Motion_compensation#Variable_block-size_motion_compensation) algorithm.
 
 Sources:
 - [Host code](https://github.com/nafarya/OpenCL-Motion-Compensation/blob/master/testproject/Source.cpp)
