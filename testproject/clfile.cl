@@ -34,13 +34,9 @@ __kernel void motion_comp_local(__read_only image2d_t a, __read_only image2d_t b
 		 for (int cur_j = 0; cur_j <= 16; cur_j++) {
 			__private int sum;
 			sum = 0;
-			for (int j = 0; j < WS; j++) {
-				for (int i = 0; i < WS; i++) {
-					__private float4 pix1 = A[i][j];
-					__private float4 pix2 = B[cur_i+i][cur_j+j];
-					sum += (int)((pix1.x - pix2.x)*(pix1.x - pix2.x));
-				}
-			}
+			__private float4 pix1 = A[f][f1];
+			__private float4 pix2 = B[cur_i+f][cur_j+f1];
+			sum += (int)((pix1.x - pix2.x)*(pix1.x - pix2.x));
 			barrier(CLK_LOCAL_MEM_FENCE);
 			if (sum < mn) {
 				mn = sum;
